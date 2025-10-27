@@ -579,7 +579,6 @@ function fill_trud() {
     for (let i = 0; i < 16; i++) {
 
         sum += `<th class="tbl_body">${look(arr_otr_sum[i] + arr_pd_sum[i] + arr_soprovoj_sum[i] + arr_rd_sum[i])}</th>`
-        //console.log(arr_rd_sum[i]);
 
     }
 
@@ -854,9 +853,10 @@ document.addEventListener("dragover", (e) => {
 
 document.addEventListener('drop', (e) => {
     e.preventDefault();
+    if(document.querySelectorAll('input[type="checkbox"]:checked[class="chooseFile"]')[0] == undefined) {return alert('Создайте файл')}
     let fn = document.querySelectorAll('input[type="checkbox"]:checked[class="chooseFile"]')[0].value;
+    
     let data1 = JSON.parse(localStorage.getItem(fn));
-    // console.log(e.target)
     if (dragged != null) {
         if (e.target.classList.contains("dropzone")) {
             let color = randomColor(150);
@@ -1002,8 +1002,6 @@ document.addEventListener('drop', (e) => {
                     number1 = i;
                 }
             }
-            console.log(number);
-            console.log(number1)
             let data = {
                 color: data1.matrix[number1].color,
                 id: data1.matrix[number1].id,
@@ -1178,15 +1176,13 @@ function randomColor(min) {
 
 
 
-//const expiresAt = new Date("2025-10-24T13:00:00Z").getTime();
 const expiresAt = new Date(document.getElementById('clock').textContent).getTime();
 
 setInterval(() => {
     const diff = expiresAt - Date.now();
-    if (diff <= 0) return console.log("Сессия истекла");
+    if (diff <= 0) return alert("Сессия истекла");
     let m = Math.floor(diff / 60000);
     let s = Math.floor((diff % 60000) / 1000);
-    //console.log(`${m} мин ${s} сек`);
     document.getElementById("watch").innerHTML = `Сессия истечет через ${m} мин ${s} сек`
     
 

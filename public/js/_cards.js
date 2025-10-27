@@ -69,7 +69,6 @@ class CardPrice {
         this._card.addEventListener('input', this.calc.bind(this))
     }
     calc(e) {
-        console.log(this)
         if (this.types == 'podryad') {
             if (e !== undefined && this._card.parentElement.className == 'topodryad') {
                 let x = Number(document.getElementById(`value_${e.target.parentElement.parentElement.parentElement.id}`).value);
@@ -81,7 +80,6 @@ class CardPrice {
         }
 
         else if (this.types == 'kos') {
-            console.log(this.types)
             if (e !== undefined && this._card.parentElement.className == 'tootr' ||
                 e !== undefined && this._card.parentElement.className == 'toproject' ||
                 e !== undefined && this._card.parentElement.className == 'tosoprovoj' ||
@@ -117,7 +115,6 @@ class CardPrice {
                 else if (this._card.parentElement.className == 'tosoprovoj') { stage = 0.1 }
                 else if (this._card.parentElement.className == 'tord') { stage = 0.5 };
 
-                console.log(this.name + '---' + type + '---' + stage);
 
                 if (x < 1000) { y = (7.702 * x) + 18957 }
                 else if (x >= 1000 && x < 5000) { y = (4.9138 * x) + 21745 }
@@ -136,7 +133,6 @@ class CardPrice {
         }
 
         else if (this.types == 'vos') {
-            console.log(this.types)
             if (e !== undefined && this._card.parentElement.className == 'tootr' ||
                 e !== undefined && this._card.parentElement.className == 'toproject' ||
                 e !== undefined && this._card.parentElement.className == 'tosoprovoj' ||
@@ -185,7 +181,6 @@ class CardPrice {
         }
         /*для берегового водовыпуска*/
         else if (this.types == 'out2') {
-            console.log(this.types)
             if (e !== undefined && this._card.parentElement.className == 'tootr' ||
                 e !== undefined && this._card.parentElement.className == 'toproject' ||
                 e !== undefined && this._card.parentElement.className == 'tosoprovoj' ||
@@ -215,7 +210,6 @@ class CardPrice {
         }
         /*для рассеивающего водовыпуска*/
         else if (this.types == 'out1') {
-            console.log(this.types)
             if (e !== undefined && this._card.parentElement.className == 'tootr' ||
                 e !== undefined && this._card.parentElement.className == 'toproject' ||
                 e !== undefined && this._card.parentElement.className == 'tosoprovoj' ||
@@ -246,7 +240,6 @@ class CardPrice {
         }
         /*ковшовый водозабор */
         else if (this.types == 'vzu1') {
-            console.log(this.types)
             if (e !== undefined && this._card.parentElement.className == 'tootr' ||
                 e !== undefined && this._card.parentElement.className == 'toproject' ||
                 e !== undefined && this._card.parentElement.className == 'tosoprovoj' ||
@@ -265,7 +258,6 @@ class CardPrice {
                 else if (this._card.parentElement.className == 'tosoprovoj') { stage = 0.1 }
                 else if (this._card.parentElement.className == 'tord') { stage = 0.5 };
 
-                // console.log(this.name + '---' + type + '---' + stage);
 
                 if (x < 1000) { y = (6.282 * x) + 77 }
                 else if (x >= 1000 && x < 5000) { y = (0.4813 * x) + 5877.8 }
@@ -285,7 +277,6 @@ class CardPrice {
         }
         /*затопленный водозабор */
         else if (this.types == 'vzu2') {
-            console.log(this.types)
             if (e !== undefined && this._card.parentElement.className == 'tootr' ||
                 e !== undefined && this._card.parentElement.className == 'toproject' ||
                 e !== undefined && this._card.parentElement.className == 'tosoprovoj' ||
@@ -304,7 +295,6 @@ class CardPrice {
                 else if (this._card.parentElement.className == 'tosoprovoj') { stage = 0.1 }
                 else if (this._card.parentElement.className == 'tord') { stage = 0.5 };
 
-                // console.log(this.name + '---' + type + '---' + stage);
 
                 if (x < 1000) { y = (6.318 * x) + 78 }
                 else if (x >= 1000 && x < 5000) { y = (0.3923 * x) + 6003.8 }
@@ -324,7 +314,6 @@ class CardPrice {
         }
         /*береговой водозабор */
         else if (this.types == 'vzu3') {
-            console.log(this.types)
             if (e !== undefined && this._card.parentElement.className == 'tootr' ||
                 e !== undefined && this._card.parentElement.className == 'toproject' ||
                 e !== undefined && this._card.parentElement.className == 'tosoprovoj' ||
@@ -362,7 +351,6 @@ class CardPrice {
         }
         /*подземный водозабор */
         else if (this.types == 'vzu4') {
-            console.log(this.types)
             if (e !== undefined && this._card.parentElement.className == 'tootr' ||
                 e !== undefined && this._card.parentElement.className == 'toproject' ||
                 e !== undefined && this._card.parentElement.className == 'tosoprovoj' ||
@@ -401,7 +389,6 @@ class CardPrice {
 
         /*водовод до 1000м3/час */
         else if (this.types == 'voda1') {
-            console.log(this.types)
             if (e !== undefined && this._card.parentElement.className == 'tootr' ||
                 e !== undefined && this._card.parentElement.className == 'toproject' ||
                 e !== undefined && this._card.parentElement.className == 'tosoprovoj' ||
@@ -433,7 +420,6 @@ class CardPrice {
         }
         /*водовод до 5000м3/час */
         else if (this.types == 'voda2') {
-            console.log(this.types)
             if (e !== undefined && this._card.parentElement.className == 'tootr' ||
                 e !== undefined && this._card.parentElement.className == 'toproject' ||
                 e !== undefined && this._card.parentElement.className == 'tosoprovoj' ||
@@ -465,7 +451,6 @@ class CardPrice {
         }
         /*водовод до 10000м3/час */
         else if (this.types == 'voda3') {
-            console.log(this.types)
             if (e !== undefined && this._card.parentElement.className == 'tootr' ||
                 e !== undefined && this._card.parentElement.className == 'toproject' ||
                 e !== undefined && this._card.parentElement.className == 'tosoprovoj' ||
@@ -496,7 +481,6 @@ class CardPrice {
         }
         /*камера переключений до 2000 м3/час */
         else if (this.types == 'voda4') {
-            console.log(this.types)
             if (e !== undefined && this._card.parentElement.className == 'tootr' ||
                 e !== undefined && this._card.parentElement.className == 'toproject' ||
                 e !== undefined && this._card.parentElement.className == 'tosoprovoj' ||
@@ -529,7 +513,6 @@ class CardPrice {
 
         /*камера переключений до 5000 м3/час */
         else if (this.types == 'voda5') {
-            console.log(this.types)
             if (e !== undefined && this._card.parentElement.className == 'tootr' ||
                 e !== undefined && this._card.parentElement.className == 'toproject' ||
                 e !== undefined && this._card.parentElement.className == 'tosoprovoj' ||
@@ -561,7 +544,6 @@ class CardPrice {
         }
         /*Коллектор до 500 м3/час */
         else if (this.types == 'voda6') {
-            console.log(this.types)
             if (e !== undefined && this._card.parentElement.className == 'tootr' ||
                 e !== undefined && this._card.parentElement.className == 'toproject' ||
                 e !== undefined && this._card.parentElement.className == 'tosoprovoj' ||
@@ -593,7 +575,6 @@ class CardPrice {
         }
         /*Коллектор до 3000 м3/час */
         else if (this.types == 'voda7') {
-            console.log(this.types)
             if (e !== undefined && this._card.parentElement.className == 'tootr' ||
                 e !== undefined && this._card.parentElement.className == 'toproject' ||
                 e !== undefined && this._card.parentElement.className == 'tosoprovoj' ||
@@ -625,7 +606,6 @@ class CardPrice {
         }
         /*Коллектор до 10000 м3/час */
         else if (this.types == 'voda8') {
-            console.log(this.types)
             if (e !== undefined && this._card.parentElement.className == 'tootr' ||
                 e !== undefined && this._card.parentElement.className == 'toproject' ||
                 e !== undefined && this._card.parentElement.className == 'tosoprovoj' ||
@@ -658,7 +638,6 @@ class CardPrice {
 
         /*Дюкер */
         else if (this.types == 'voda9') {
-            console.log(this.types)
             if (e !== undefined && this._card.parentElement.className == 'tootr' ||
                 e !== undefined && this._card.parentElement.className == 'toproject' ||
                 e !== undefined && this._card.parentElement.className == 'tosoprovoj' ||
