@@ -1180,7 +1180,7 @@ const expiresAt = new Date(document.getElementById('clock').textContent).getTime
 
 setInterval(() => {
     const diff = expiresAt - Date.now();
-    if (diff <= 0) return alert("Сессия истекла");
+    if (diff <= 0) return console.log("Сессия истекла");
     let m = Math.floor(diff / 60000);
     let s = Math.floor((diff % 60000) / 1000);
     document.getElementById("watch").innerHTML = `Сессия истечет через ${m} мин ${s} сек`
