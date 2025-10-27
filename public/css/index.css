@@ -1,0 +1,655 @@
+.container1 {
+    display: grid;
+    grid-template-areas:
+        "menu menu "
+        "progress-container progress-container"
+        "tabs tabs "
+        "rightbar leftbar "
+    ;
+
+    grid-template-columns: 1fr 1fr;
+    margin: 0 20px 0 20px;
+    gap: 10px;
+
+    font-family: system-ui;
+
+
+
+
+}
+
+#menu {
+    grid-area: menu;
+    display: inline-block;
+    /*position: sticky;
+    top: 25px;
+    background-color: white;*/
+}
+
+#tabs {
+    grid-area: tabs;
+    margin-left: 10px;
+    /*position: sticky;
+    top: 80px;
+    background-color: white;*/
+}
+
+.rightbar {
+    grid-area: rightbar;
+    display: grid;
+    grid-template-areas:
+        "headObj "
+        "baza"
+        "resObj "
+    ;
+    margin: 0 20px 0 20px;
+    gap: 10px;
+    max-height: 90vh;
+    font-family: cursive;
+    /*grid-template-rows: 10% 80% 10%;*/
+
+
+}
+
+
+
+
+
+.matrix {
+    grid-area: leftbar;
+    border: 3px solid black;
+    background-color: lightgrey;
+    padding: 10px;
+
+    max-height: 90vh;
+
+
+}
+
+.headObj {
+    grid-area: headObj;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 20px 0 20px;
+    gap: 10px;
+
+    border: 1px solid blue;
+    min-height: 200px;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    /*background-color: blueviolet;*/
+
+}
+
+.isx {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 2fr 4fr 1fr;
+    padding: 10px 5px 10px 0px;
+    gap: 10px;
+    font-size: 18pt;
+    color: blue;
+}
+
+.isx textarea {
+    border: 1px solid purple;
+    width: 85%;
+    border-radius: 5px;
+    text-align: center;
+
+
+}
+
+.isx input {
+    border: 1px solid purple;
+    width: 100px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+.btn_isx {
+    border: 1px solid purple;
+    width: 50px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.results {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 5px 0 0px;
+    gap: 10px;
+    font-size: 20pt;
+    align-items: center;
+    color: blue;
+
+}
+
+#result_price,
+#result_trud {
+    border-bottom: 1px dotted lightblue;
+    text-align: center;
+}
+
+.baza {
+    grid-area: baza;
+    border: 0px solid red;
+    height: 100%;
+    overflow: auto;
+
+
+}
+
+
+
+
+
+.podryad,
+.project,
+.otr,
+.project,
+.soprovoj,
+.rd {
+    border: 1px double blue;
+    min-height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.podryad h5,
+.project h5,
+.otr h5,
+.project h5,
+.soprovoj h5,
+.rd h5 {
+    text-align: center;
+    border-bottom: 1px dotted blue;
+}
+
+.podryad1,
+.project1,
+.otr1,
+.project1,
+.soprovoj1,
+.rd1 {
+    display: grid;
+    grid-template-areas:
+        " a b c "
+    ;
+
+    grid-template-rows: auto;
+    grid-template-columns: 10fr 1fr 10fr;
+
+    gap: 5px;
+
+}
+
+.frompodryad,
+.fromotr,
+.fromproject,
+.fromsoprovoj,
+.fromrd {
+    grid-area: a;
+}
+
+.middlepodryad,
+.middleotr,
+.middleproject,
+.middlesoprovoj,
+.middlerd {
+    display: flex;
+    grid-area: b;
+    border-left: 1px dotted blue;
+    border-right: 1px dotted blue;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.topodryad,
+.tootr,
+.toproject,
+.tosoprovoj,
+.tord {
+    grid-area: c;
+}
+
+.dropzone {
+    border: 10px solid black;
+    background-color: lightgrey;
+}
+
+.movecard {
+    border: 3px solid black;
+    opacity: 0.5;
+}
+
+.cardPrice {
+    border-radius: 5px;
+    background-color: orange;
+    margin: 5px;
+    width: fit-content;
+    padding: 5px;
+    user-select: none;
+    display: inline-block;
+
+}
+
+.cardPrice.dragging {
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+
+.cardPrice2 {
+    border-radius: 5px;
+    background-color: orange;
+    margin: 5px;
+    width: fit-content;
+    padding: 5px;
+    user-select: none;
+    display: inline-block;
+
+}
+
+.recentProject {
+    grid-area: resObj;
+}
+
+
+
+.pag {
+    float: inline-start;
+    height: 40px;
+    padding-left: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: lightblue;
+    margin-right: 5px;
+
+}
+
+.btnclose {
+    background-color: lightblue;
+}
+
+.pag1 {
+    padding: 10px;
+    margin-right: 5px;
+
+}
+
+.pag2 {
+
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pag input {
+    border: 0;
+}
+
+
+.modal1 {
+    width: 450px;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    background-color: lightblue;
+    display: none;
+    border: 0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 6px rgba(152, 187, 215, 0.7);
+
+
+}
+
+.modal1_name {
+    width: 100%;
+
+    border: 1px solid white;
+}
+
+.modal1_name input {
+    width: 100%;
+    height: 50px;
+    margin-left: 5px;
+
+}
+
+.modal1_data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid white;
+    gap: 5px;
+    padding: 5px;
+}
+
+.modal1_data button {
+    border-radius: 5px;
+}
+
+
+.nav {
+    padding: 5px;
+    border: 1px solid lightblue;
+
+}
+
+#ctxmenu {
+    display: none;
+    width: 300px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 0 10px 0;
+    border: 0;
+    box-shadow: 0 10px 6px rgba(139, 139, 130, 0.7);
+
+}
+
+
+.ctxbutton {
+    width: 100%;
+    border: 0;
+    background-color: white;
+    text-align: left;
+    padding-left: 20px;
+
+}
+
+.ctxbutton:hover {
+    background-color: lightgrey;
+
+}
+
+
+
+.card1 {
+    width: 30px;
+    height: 30px;
+
+    text-align: center;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 6px rgba(152, 187, 215, 0.7);
+
+}
+
+.card_info {
+    width: 450px;
+
+    background-color: lightblue;
+    position: absolute;
+    border-radius: 10px;
+    z-index: 3;
+    padding: 10px;
+    display: grid;
+    gap: 10px;
+    box-shadow: 0 10px 6px rgba(152, 187, 215, 0.7);
+    border: 0;
+
+
+}
+
+.task {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    padding: 20px;
+
+
+}
+
+.task,
+.doers,
+.duration {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.doers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    padding: 20px;
+}
+
+.duration {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    padding: 20px;
+}
+
+.btnTask {
+
+    margin: 0 auto;
+}
+
+.card_info button {
+    border-radius: 5px;
+    background-color: #e2e6ea;
+}
+
+.cell {
+    border: 1px solid lightgrey;
+}
+
+.cell_sprint {
+    padding-left: 10px;
+    background-color: lightgrey;
+    border: 1px solid;
+    text-align: center;
+
+}
+
+.cell_header {
+    text-align: center;
+    background-color: lightblue;
+    border: 1px solid;
+}
+
+.cell_sprint_tot,
+.cell_total {
+    text-align: center;
+    background-color: lightgrey;
+    border: 1px solid;
+}
+
+#main {
+    /*border: 1px dashed black;*/
+    gap: 1px;
+    background-color: white;
+    max-height: 88vh;
+    padding: 10px;
+    overflow: auto;
+
+
+
+}
+
+
+.tbl_price {
+    border-collapse: collapse;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.tbl_price td:nth-child(1) {
+    width: 5%;
+}
+
+.tbl_price td:nth-child(2) {
+    width: 30%;
+}
+
+.tbl_price td:nth-child(3) {
+    width: 10%;
+}
+
+.tbl_price td:nth-child(4) {
+    width: 10%;
+}
+
+
+.tbl_trud {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+.tbl_header,
+.tbl_body,
+.tbl_body_summary {
+    border: 1px solid black;
+    padding-left: 5px;
+
+}
+
+.tbl_header {
+    text-align: center;
+}
+
+.projectInfo {
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+}
+
+.projectInfo h5 {
+    text-align: center;
+}
+
+.projectInfoCard {
+    border: 1px solid;
+    border-radius: 5px;
+    padding-top: 10px;
+}
+
+.projectInfoCard div {
+    display: grid;
+    grid-template-rows: auto;
+    text-align: center;
+    margin: 0 10px 0 10px;
+
+}
+
+.projectInfoCard div h6:nth-child(odd) {
+    background-color: lightblue;
+    text-align: left;
+}
+
+.projectInfoCard div h6:nth-child(even) {
+    background-color: white;
+    font-style: italic;
+    text-align: center;
+}
+
+.recentProjectBody {
+    max-height: 200px;
+    overflow-y: auto;
+
+}
+
+.recentProject1 {
+    border: 1px solid;
+    border-radius: 5px;
+    padding-top: 10px;
+}
+
+.recentProject h5 {
+    text-align: center;
+
+}
+
+.recentProjectHeader {
+
+    padding: 5px;
+    margin: 0 10px 0 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    background-color: lightblue;
+}
+
+
+
+
+.recPros {
+    margin: 10px 10px 10px 10px;
+    padding: 5px;
+    font-style: italic;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+}
+
+.recPros div {
+    white-space: wrap;
+    padding: 0 5px 0 5px;
+    text-overflow: ellipsis;
+
+}
+
+.recPros:nth-child(even) {
+    background-color: silver;
+
+}
+
+.recPros:nth-child(odd) {
+    background-color: lightgrey;
+}
+
+.recPros button {
+    border-radius: 5px;
+    width: 40px;
+
+
+}
+
+.clipText {
+    min-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+#countdown {
+    font-size: 1em;
+    
+}
+
+.progress-container {
+    grid-area: progress-container;
+    width: 100%;
+    height: 25px;
+    background: #ddd;
+    border-radius: 15px;
+    margin: 0 10px 0 10px;
+   
+    overflow: hidden;
+}
+
+.progress-bar {
+
+    height: 100%;
+    background: linear-gradient(90deg, #4caf50, #fbc02d, #f44336);
+    width: 100%;
+    border-radius: 15px;
+    transition: width 1s linear;
+     padding: 0 20px 0 20px;
+}

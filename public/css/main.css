@@ -1,0 +1,103 @@
+html {
+   max-height: 100vh;
+
+
+
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "content";
+
+max-height: 100vh;
+}
+
+
+.header {
+    grid-area: header;
+    /*color: white;*/
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+
+}
+
+.header h3 {
+    text-align: center;
+    font-family: cursive;
+}
+
+#content {
+    grid-area: content;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+
+
+
+
+
+.dropdown {
+    display: inline;
+}
+
+.btn_menu {
+    /*background-color: rgb(0, 100, 130);
+    color: white;*/
+    margin-left: 10px;
+    border: 0px;
+    border-radius: 7px;
+
+
+}
+
+.btn_menu:hover {
+    border: 1px solid rgb(0, 100, 130);
+    border-radius: 7px;
+}
+
+.dropdown-item:hover {
+    background-color: rgb(0, 100, 130);
+    border: 1px solid rgb(0, 100, 130);
+    border-radius: 7px;
+}
+
+.banner {
+    width: 100%;
+}
+
+.a h1 {
+    color: blue;
+    text-align: center;
+}
+
+.a table {
+    border-collapse: collapse;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.a table tr th {
+    border: 1px solid;
+    padding: 10px;
+    font-size: 10pt;
+    width: 100px;
+    text-align: center;
+    background-color: lightblue;
+
+}
+
+.a table tr td {
+    border: 1px solid;
+    padding: 10px;
+    font-size: 10pt;
+    width: 100px;
+    text-align: center;
+
+}

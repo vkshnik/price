@@ -1,0 +1,44 @@
+<div class="adminPanel">
+    <div class='a'>
+        <h1><a href="/">&#9889;</a></h1>
+        <h1>Привет,{{{user}}}</h1>
+        <br>
+        <h1>Список пользователей</h1>
+        <table id="tbl">
+            <tr>
+                <th>ЛОГИН</th>
+                <th>ПАРОЛЬ</th>
+                <th>РОЛЬ</th>
+                <th></th>
+            </tr>
+            {{{allUser}}}
+        </table>
+
+    </div>
+</div>
+<script>
+    document.addEventListener('click', async (e) => {
+
+        if (e.target.className == 'a btn') {
+            let tbl = document.getElementById('tbl').rows.length - 1;
+            let arr = [];
+            for (let i = 0; i < tbl; i++) {
+                arr.push({
+                    username: document.getElementById('user' + i).value,
+                    password: document.getElementById('pass' + i).value,
+                    role: document.getElementById('role' + i).value
+                })
+            }
+            let response = await fetch('/adminPanel', {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(arr)
+            });
+
+            if (response.ok) alert('Изменения сохранены на сервере');
+            window.location.reload();
+        }
+    })
+</script>

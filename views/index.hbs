@@ -1,0 +1,541 @@
+<div class="container1">
+  <div id="menu">
+    {{{projects}}}
+
+    <div class="dropdown">
+      <button class="btn_menu" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Пользователь: {{user}}
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li>
+          <form action="/logout" method="post">
+            <button class="dropdown-item" type="submit">Выйти</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+    {{{clock}}}
+    <div id="watch" class="dropdown"></div>
+
+  </div>
+  <div class="progress-container">
+    <div id="progressBar" class="progress-bar">
+      <div id="countdown">Загрузка...</div>
+    </div>
+  </div>
+  <div id="tabs"></div>
+
+  <div class="rightbar">
+    <div class="headObj">
+
+      <div class="isx" id='idisx'>
+        <div>Объект</div>
+        <div><textarea rows="1" id="_nameProject" value="" placeholder="Введите название объекта"></textarea></div>
+        <div><button class="btn_isx" id="isx1">&#10004;</button></div>
+        <div>Автор</div>
+        <div><textarea rows="1" id="_author" value="" placeholder="Введите автора"></textarea></div>
+        <div><button class="btn_isx" id="isx2">&#10004;</button></div>
+        <div>Прибыль</div>
+        <div style="margin: 0 auto;"><input id="profit" type="number"></div>
+        <div><button class="btn_isx" id="isx3">&#10004;</button></div>
+        <div>НДС</div>
+        <div style="margin: 0 auto;"><input id="tax" type="number"></div>
+        <div><button class="btn_isx" id="isx4">&#10004;</button></div>
+
+      </div>
+      <div class="results">
+        <div>Общая Стоимость</div>
+        <div id="result_price"></div>
+        <div>Общая Трудоемкость</div>
+        <div id="result_trud"></div>
+
+
+      </div>
+    </div>
+
+    <div class="baza">
+      <div class="podryad">
+        <h5>Подрядчики</h5>
+        <div class="podryad1">
+          <div class="frompodryad">
+            <div class="cardPrice" id="igdi" draggable="true">Геодезия</div>
+            <div class="cardPrice" id="igi" draggable="true">Геология</div>
+            <div class="cardPrice" id="iei" draggable="true">Экология</div>
+            <div class="cardPrice" id="igmi" draggable="true">Гидромет</div>
+            <div class="cardPrice" id="obsl" draggable="true">Обследования</div>
+            <div class="cardPrice" id="arch" draggable="true">Археология</div>
+            <div class="cardPrice" id="oo" draggable="true">Организация ОО</div>
+            <div class="cardPrice" id="ovos" draggable="true">ОВОС</div>
+            <div class="cardPrice" id="oos" draggable="true">ООС</div>
+            <div class="cardPrice" id="szz" draggable="true">СЗЗ</div>
+            <div class="cardPrice" id="zso" draggable="true">ЗСО</div>
+            <div class="cardPrice" id="geo" draggable="true">Оценка влияния строительства</div>
+            <div class="cardPrice" id="vbr" draggable="true">Оценка воздействия на ВБР</div>
+            <div class="cardPrice" id="gge" draggable="true">ГГЭ</div>
+            <div class="cardPrice" id="gee" draggable="true">ГЭЭ</div>
+            <div class="cardPrice" id="sgee" draggable="true">Сопровождение ГЭЭ</div>
+            <div class="cardPrice" id="tip" draggable="true">Типография</div>
+            <div class="cardPrice" id="kom" draggable="true">Командировочные</div>
+            <div class="cardPrice" id="nep" draggable="true">Непредвиденные</div>
+            <div class="cardPrice" id="sthg" draggable="true">Прочие</div>
+
+          </div>
+          <div class="middlepodryad"><img src="/drag.svg"></div>
+          <div class="topodryad" id="topodryad"></div>
+        </div>
+      </div>
+
+      <div class="otr">
+        <h5>ОТР</h5>
+        <div class="otr1">
+          <div class="fromotr">
+            <div class="cardPrice" id="otr_kos" draggable="true">КОС</div>
+            <div class="cardPrice" id="otr_vos" draggable="true">ВОС</div>
+          </div>
+          <div class="middleotr"><img src="/drag.svg"></div>
+          <div class="tootr" id="tootr"></div>
+
+        </div>
+
+      </div>
+
+      <div class="project">
+        <h5>Проектная документация</h5>
+        <div class="project1">
+          <div class="fromproject">
+            <div class="cardPrice" id="pd_kos" draggable="true">КОС (полный комплекс)</div>
+            <div class="cardPrice" id="pd_kos" draggable="true">Решетки</div>
+            <div class="cardPrice" id="pd_kos" draggable="true">Песколовки</div>
+            <div class="cardPrice" id="pd_kos" draggable="true">Биология</div>
+            <div class="cardPrice" id="pd_kos" draggable="true">Воздуходувки</div>
+            <div class="cardPrice" id="pd_kos" draggable="true">Иловая НС</div>
+            <div class="cardPrice" id="pd_kos" draggable="true">НС техводы</div>
+            <div class="cardPrice" id="pd_kos" draggable="true">Аэроб.стабилизация</div>
+            <div class="cardPrice" id="pd_kos" draggable="true">Мехобезвоживание</div>
+            <div class="cardPrice" id="pd_kos" draggable="true">Доочистка на фильтрах</div>
+            <div class="cardPrice" id="pd_kos" draggable="true">Глубокая доочистка</div>
+            <div class="cardPrice" id="pd_kos" draggable="true">Обеззараживание</div>
+            <div class="cardPrice" id="pd_kos" draggable="true">КНС</div>
+            <div class="cardPrice" id="pd_kos" draggable="true">АБК(КОС)</div>
+            <div class="cardPrice" id="pd_kos" draggable="true">Мастерская(КОС)</div>
+            <div class="cardPrice" id="pd_kos" draggable="true">Реагентная(КОС)</div>
+            <div class="cardPrice" id="pd_kos" draggable="true">Лаборатория(КОС)</div>
+            <div class="cardPrice" id="pd_kos" draggable="true">АСУТП(КОС)</div>
+            <div class="cardPrice" id="pd_kos" draggable="true">Внутриплощ. инжсети(КОС)</div>
+            <div class="cardPrice" id="pd_out1" draggable="true">Рассеивающий водовыпуск</div>
+            <div class="cardPrice" id="pd_out2" draggable="true">Береговой водовыпуск</div>
+
+
+            <hr>
+            <div class="cardPrice" id="pd_vos" draggable="true">ВОС (полный комплекс)</div>
+            <div class="cardPrice" id="pd_vos" draggable="true">Станция водоочистки</div>
+            <div class="cardPrice" id="pd_vos" draggable="true">Станция очистки промывных вод</div>
+            <div class="cardPrice" id="pd_vos" draggable="true">Сгущение осадка</div>
+            <div class="cardPrice" id="pd_vos" draggable="true">НС 2подъема</div>
+            <div class="cardPrice" id="pd_vos" draggable="true">РЧВ</div>
+            <div class="cardPrice" id="pd_vos" draggable="true">АБК(ВОС)</div>
+            <div class="cardPrice" id="pd_vos" draggable="true">Мастерская(ВОС)</div>
+            <div class="cardPrice" id="pd_vos" draggable="true">Реагентная(ВОС)</div>
+            <div class="cardPrice" id="pd_vos" draggable="true">Лаборатория(ВОС)</div>
+            <div class="cardPrice" id="pd_vos" draggable="true">АСУТП(ВОС)</div>
+            <div class="cardPrice" id="pd_vos" draggable="true">Внутриплощ. инжсети(ВОС)</div>
+            <div class="cardPrice" id="pd_vzu1" draggable="true">Ковшовый водозабор</div>
+            <div class="cardPrice" id="pd_vzu2" draggable="true">Затопленный водозабор</div>
+            <div class="cardPrice" id="pd_vzu3" draggable="true">Береговой водозабор</div>
+            <div class="cardPrice" id="pd_vzu4" draggable="true">Подземный водозабор</div>
+
+            <hr>
+            <div class="cardPrice" id="pd_voda1" draggable="true">Водовод до 1000м3/час</div>
+            <div class="cardPrice" id="pd_voda2" draggable="true">Водовод до 5000м3/час</div>
+            <div class="cardPrice" id="pd_voda3" draggable="true">Водовод до 10000м3/час</div>
+            <div class="cardPrice" id="pd_voda4" draggable="true">Камера переключений до 2000м3/час</div>
+            <div class="cardPrice" id="pd_voda5" draggable="true">Камера переключений до 5000м3/час</div>
+            <div class="cardPrice" id="pd_voda6" draggable="true">Коллектор до 500м3/час</div>
+            <div class="cardPrice" id="pd_voda7" draggable="true">Коллектор до 3000м3/час</div>
+            <div class="cardPrice" id="pd_voda8" draggable="true">Коллектор до 10000м3/час</div>
+            <div class="cardPrice" id="pd_voda9" draggable="true">Дюкер</div>
+
+          </div>
+          <div class="middleproject"><img src="/drag.svg"></div>
+          <div class="toproject" id="toproject"></div>
+
+        </div>
+
+      </div>
+
+      <div class="soprovoj">
+        <h5>Сопровождение экспертиз</h5>
+        <div class="soprovoj1">
+          <div class="fromsoprovoj">
+            <div class="cardPrice" id="soprovoj_kos" draggable="true">КОС (полный комплекс)</div>
+            <div class="cardPrice" id="soprovoj_kos" draggable="true">Решетки</div>
+            <div class="cardPrice" id="soprovoj_kos" draggable="true">Песколовки</div>
+            <div class="cardPrice" id="soprovoj_kos" draggable="true">Биология</div>
+            <div class="cardPrice" id="soprovoj_kos" draggable="true">Воздуходувки</div>
+            <div class="cardPrice" id="soprovoj_kos" draggable="true">Иловая НС</div>
+            <div class="cardPrice" id="soprovoj_kos" draggable="true">НС техводы</div>
+            <div class="cardPrice" id="soprovoj_kos" draggable="true">Аэроб.стабилизация</div>
+            <div class="cardPrice" id="soprovoj_kos" draggable="true">Мехобезвоживание</div>
+            <div class="cardPrice" id="soprovoj_kos" draggable="true">Доочистка на фильтрах</div>
+            <div class="cardPrice" id="soprovoj_kos" draggable="true">Глубокая доочистка</div>
+            <div class="cardPrice" id="soprovoj_kos" draggable="true">Обеззараживание</div>
+            <div class="cardPrice" id="soprovoj_kos" draggable="true">КНС</div>
+            <div class="cardPrice" id="soprovoj_kos" draggable="true">АБК(КОС)</div>
+            <div class="cardPrice" id="soprovoj_kos" draggable="true">Мастерская(КОС)</div>
+            <div class="cardPrice" id="soprovoj_kos" draggable="true">Реагентная(КОС)</div>
+            <div class="cardPrice" id="soprovoj_kos" draggable="true">Лаборатория(КОС)</div>
+            <div class="cardPrice" id="soprovoj_kos" draggable="true">АСУТП(КОС)</div>
+            <div class="cardPrice" id="soprovoj_kos" draggable="true">Внутриплощ. инжсети(КОС)</div>
+            <div class="cardPrice" id="soprovoj_out1" draggable="true">Рассеивающий водовыпуск</div>
+            <div class="cardPrice" id="soprovoj_out2" draggable="true">Береговой водовыпуск</div>
+
+            <hr>
+
+
+
+            <div class="cardPrice" id="soprovoj_vos" draggable="true">ВОС (полный комплекс)</div>
+            <div class="cardPrice" id="soprovoj_vos" draggable="true">Станция водоочистки</div>
+            <div class="cardPrice" id="soprovoj_vos" draggable="true">Станция очистки промывных вод</div>
+            <div class="cardPrice" id="soprovoj_vos" draggable="true">Сгущение осадка</div>
+            <div class="cardPrice" id="soprovoj_vos" draggable="true">НС 2подъема</div>
+            <div class="cardPrice" id="soprovoj_vos" draggable="true">РЧВ</div>
+            <div class="cardPrice" id="soprovoj_vos" draggable="true">АБК(ВОС)</div>
+            <div class="cardPrice" id="soprovoj_vos" draggable="true">Мастерская(ВОС)</div>
+            <div class="cardPrice" id="soprovoj_vos" draggable="true">Реагентная(ВОС)</div>
+            <div class="cardPrice" id="soprovoj_vos" draggable="true">Лаборатория(ВОС)</div>
+            <div class="cardPrice" id="soprovoj_vos" draggable="true">АСУТП(ВОС)</div>
+            <div class="cardPrice" id="soprovoj_vos" draggable="true">Внутриплощ. инжсети(ВОС)</div>
+            <div class="cardPrice" id="soprovoj_vzu1" draggable="true">Ковшовый водозабор</div>
+            <div class="cardPrice" id="soprovoj_vzu2" draggable="true">Затопленный водозабор</div>
+            <div class="cardPrice" id="soprovoj_vzu3" draggable="true">Береговой водозабор</div>
+            <div class="cardPrice" id="soprovoj_vzu4" draggable="true">Подземный водозабор</div>
+
+            <hr>
+            <div class="cardPrice" id="soprovoj_voda1" draggable="true">Водовод до 1000м3/час</div>
+            <div class="cardPrice" id="soprovoj_voda2" draggable="true">Водовод до 5000м3/час</div>
+            <div class="cardPrice" id="soprovoj_voda3" draggable="true">Водовод до 10000м3/час</div>
+            <div class="cardPrice" id="soprovoj_voda4" draggable="true">Камера переключений до 2000м3/час</div>
+            <div class="cardPrice" id="soprovoj_voda5" draggable="true">Камера переключений до 5000м3/час</div>
+            <div class="cardPrice" id="soprovoj_voda6" draggable="true">Коллектор до 500м3/час</div>
+            <div class="cardPrice" id="soprovoj_voda7" draggable="true">Коллектор до 3000м3/час</div>
+            <div class="cardPrice" id="soprovoj_voda8" draggable="true">Коллектор до 10000м3/час</div>
+            <div class="cardPrice" id="soprovoj_voda9" draggable="true">Дюкер</div>
+
+
+          </div>
+          <div class="middlesoprovoj"><img src="/drag.svg"></div>
+          <div class="tosoprovoj" id="tosoprovoj"></div>
+
+        </div>
+      </div>
+
+      <div class="rd">
+        <h5>Рабочая документация</h5>
+        <div class="rd1">
+          <div class="fromrd">
+            <div class="cardPrice" id="rd_kos" draggable="true">КОС (полный комплекс)</div>
+            <div class="cardPrice" id="rd_kos" draggable="true">Решетки</div>
+            <div class="cardPrice" id="rd_kos" draggable="true">Песколовки</div>
+            <div class="cardPrice" id="rd_kos" draggable="true">Биология</div>
+            <div class="cardPrice" id="rd_kos" draggable="true">Воздуходувки</div>
+            <div class="cardPrice" id="rd_kos" draggable="true">Иловая НС</div>
+            <div class="cardPrice" id="rd_kos" draggable="true">НС техводы</div>
+            <div class="cardPrice" id="rd_kos" draggable="true">Аэроб.стабилизация</div>
+            <div class="cardPrice" id="rd_kos" draggable="true">Мехобезвоживание</div>
+            <div class="cardPrice" id="rd_kos" draggable="true">Доочистка на фильтрах</div>
+            <div class="cardPrice" id="rd_kos" draggable="true">Глубокая доочистка</div>
+            <div class="cardPrice" id="rd_kos" draggable="true">Обеззараживание</div>
+            <div class="cardPrice" id="rd_kos" draggable="true">КНС</div>
+            <div class="cardPrice" id="rd_kos" draggable="true">АБК(КОС)</div>
+            <div class="cardPrice" id="rd_kos" draggable="true">Мастерская(КОС)</div>
+            <div class="cardPrice" id="rd_kos" draggable="true">Реагентная(КОС)</div>
+            <div class="cardPrice" id="rd_kos" draggable="true">Лаборатория(КОС)</div>
+            <div class="cardPrice" id="rd_kos" draggable="true">АСУТП(КОС)</div>
+            <div class="cardPrice" id="rd_kos" draggable="true">Внутриплощ. инжсети(КОС)</div>
+            <div class="cardPrice" id="rd_out1" draggable="true">Рассеивающий водовыпуск</div>
+            <div class="cardPrice" id="rd_out2" draggable="true">Береговой водовыпуск</div>
+
+
+            <hr>
+            <div class="cardPrice" id="rd_vos" draggable="true">ВОС (полный комплекс)</div>
+            <div class="cardPrice" id="rd_vos" draggable="true">Ковшовый водозабор</div>
+            <div class="cardPrice" id="rd_vos" draggable="true">Затопленный водозабор</div>
+            <div class="cardPrice" id="rd_vos" draggable="true">Береговой водозабор</div>
+            <div class="cardPrice" id="rd_vos" draggable="true">Подземный водозабор</div>
+            <div class="cardPrice" id="rd_vos" draggable="true">Станция водоочистки</div>
+            <div class="cardPrice" id="rd_vos" draggable="true">Станция очистки промывных вод</div>
+            <div class="cardPrice" id="rd_vos" draggable="true">Сгущение осадка</div>
+            <div class="cardPrice" id="rd_vos" draggable="true">НС 2подъема</div>
+            <div class="cardPrice" id="rd_vos" draggable="true">РЧВ</div>
+            <div class="cardPrice" id="rd_vos" draggable="true">АБК(ВОС)</div>
+            <div class="cardPrice" id="rd_vos" draggable="true">Мастерская(ВОС)</div>
+            <div class="cardPrice" id="rd_vos" draggable="true">Реагентная(ВОС)</div>
+            <div class="cardPrice" id="rd_vos" draggable="true">Лаборатория(ВОС)</div>
+            <div class="cardPrice" id="rd_vos" draggable="true">АСУТП(ВОС)</div>
+            <div class="cardPrice" id="rd_vos" draggable="true">Внутриплощ. инжсети(ВОС)</div>
+            <div class="cardPrice" id="rd_vzu1" draggable="true">Ковшовый водозабор</div>
+            <div class="cardPrice" id="rd_vzu2" draggable="true">Затопленный водозабор</div>
+            <div class="cardPrice" id="rd_vzu3" draggable="true">Береговой водозабор</div>
+            <div class="cardPrice" id="rd_vzu4" draggable="true">Подземный водозабор</div>
+
+
+            <hr>
+            <div class="cardPrice" id="rd_voda1" draggable="true">Водовод до 1000м3/час</div>
+            <div class="cardPrice" id="rd_voda2" draggable="true">Водовод до 5000м3/час</div>
+            <div class="cardPrice" id="rd_voda3" draggable="true">Водовод до 10000м3/час</div>
+            <div class="cardPrice" id="rd_voda4" draggable="true">Камера переключений до 2000м3/час</div>
+            <div class="cardPrice" id="rd_voda5" draggable="true">Камера переключений до 5000м3/час</div>
+            <div class="cardPrice" id="rd_voda6" draggable="true">Коллектор до 500м3/час</div>
+            <div class="cardPrice" id="rd_voda7" draggable="true">Коллектор до 3000м3/час</div>
+            <div class="cardPrice" id="rd_voda8" draggable="true">Коллектор до 10000м3/час</div>
+            <div class="cardPrice" id="rd_voda9" draggable="true">Дюкер</div>
+
+
+          </div>
+          <div class="middlerd"><img src="/drag.svg"></div>
+          <div class="tord" id="tord"></div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+    <div class="recentProject">
+      <h5>Последние проекты</h5>
+      <div id="recentProject" class="recentProject1">
+        <div class="recentProjectHeader">
+          <div></div>
+          <div>Имя</div>
+          <div>Автор</div>
+          <div>Изм.</div>
+        </div>
+        <div class="recentProjectBody">
+          {{{pro}}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="matrix" id="matrix">
+    <div id="main">
+      <br>
+      <div style="border-radius: 10px; border: 0px; text-align:right; "><button
+          style="border-radius: 10px; border: 0px;  " onclick="convertXlsx()"><img src="/xlsx.svg"></button></div>
+      <h5 style="text-align:center">Укрупненный расчет стоимости ПИР</h5>
+      <br>
+
+      <table class="tbl_price" id="tbl_price">
+        <tbody>
+          <tr>
+            <td colspan="2" class="tbl_header1">Наименование объекта:</td>
+            <td colspan="4" class="tbl_header1" id="tbl_header_name"></td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th class="tbl_body">№</th>
+            <th class="tbl_body">Наименование</th>
+            <th class="tbl_body">Ед. изм.</th>
+            <th class="tbl_body">Кол.</th>
+            <th class="tbl_body">Стоимость ед., тыс.руб.</th>
+            <th class="tbl_body">Стоимость всего, тыс.руб.</th>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th class="tbl_body">1</th>
+            <th colspan="5" class="tbl_body">Подрядчики и прочие работы</th>
+          </tr>
+        </tbody>
+        <tbody id="tbl_body_data_section1"></tbody>
+        <tbody>
+          <tr>
+            <th class="tbl_body">1</th>
+            <th colspan="4" class="tbl_body">Итого Подрядчики и прочие работы</th>
+            <th class="tbl_body_summary" id="tbl_body_summary_section1"></th>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th class="tbl_body">2</th>
+            <th colspan="5" class="tbl_body">Основные технические решения</th>
+          </tr>
+        </tbody>
+        <tbody id="tbl_body_data_section2"></tbody>
+        <tbody>
+          <tr>
+            <th class="tbl_body">2</th>
+            <th colspan="4" class="tbl_body">Итого Основные технические решения</th>
+            <th class="tbl_body_summary" id="tbl_body_summary_section2"></th>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th class="tbl_body">3</th>
+            <th colspan="5" class="tbl_body">Проектная документация</th>
+          </tr>
+        </tbody>
+        <tbody id="tbl_body_data_section3"></tbody>
+        <tbody>
+          <tr>
+            <th class="tbl_body">3</th>
+            <th colspan="4" class="tbl_body">Итого Проектная документация</th>
+            <th class="tbl_body_summary" id="tbl_body_summary_section3"></th>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th class="tbl_body">4</th>
+            <th colspan="5" class="tbl_body">Сопровождение экспертиз</th>
+          </tr>
+        </tbody>
+        <tbody id="tbl_body_data_section4"></tbody>
+        <tbody>
+          <tr>
+            <th class="tbl_body">4</th>
+            <th colspan="4" class="tbl_body">Итого Сопровождение экспертиз</th>
+            <th class="tbl_body_summary" id="tbl_body_summary_section4"></th>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th class="tbl_body">5</th>
+            <th colspan="5" class="tbl_body">Рабочая документация</th>
+          </tr>
+        </tbody>
+        <tbody id="tbl_body_data_section5"></tbody>
+        <tbody>
+          <tr>
+            <th class="tbl_body">5</th>
+            <th colspan="4" class="tbl_body">Итого Рабочая документация</th>
+            <th class="tbl_body_summary" id="tbl_body_summary_section5"></th>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th class="tbl_body">6</th>
+            <th colspan="4" class="tbl_body">Итого Себестоимость</th>
+            <th class="tbl_body" id="tbl_body_summary_section6"></th>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <td class="tbl_body">7</td>
+            <td colspan="3" class="tbl_body">Прибыль</td>
+            <td class="tbl_body" id="tbl_body_summary_value_section7"></td>
+            <td class="tbl_body" id="tbl_body_summary_section7"></td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th class="tbl_body">8</th>
+            <th colspan="4" class="tbl_body">Итого Стоимость</th>
+            <th class="tbl_body" id="tbl_body_summary_section8"></th>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <td class="tbl_body">9</td>
+            <td colspan="3" class="tbl_body">НДС</td>
+            <td class="tbl_body" id="tbl_body_summary_value_section9"></td>
+            <td class="tbl_body" id="tbl_body_summary_section9"></td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th class="tbl_body">10</th>
+            <th colspan="4" class="tbl_body">Итого Стоимость с НДС</th>
+            <th class="tbl_body" id="tbl_body_summary_section10"></th>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h5 style="text-align:center">Трудозатраты, чел-дни</h5>
+      <br>
+      <table class="tbl_trud" id="tbl_trud">
+        <tbody>
+          <tr>
+            <th class="tbl_header">Наименование</th>
+            <th class="tbl_header">ПЗ</th>
+            <th class="tbl_header">ПЗУ</th>
+            <th class="tbl_header">АР</th>
+            <th class="tbl_header">КР</th>
+            <th class="tbl_header">ЭС</th>
+            <th class="tbl_header">ВС</th>
+            <th class="tbl_header">ВО</th>
+            <th class="tbl_header">ОВ</th>
+            <th class="tbl_header">СС</th>
+            <th class="tbl_header">ТХ</th>
+            <th class="tbl_header">АТХ</th>
+            <th class="tbl_header">ПОС</th>
+            <th class="tbl_header">ООС</th>
+            <th class="tbl_header">ПБ</th>
+            <th class="tbl_header">ТБЭ</th>
+            <th class="tbl_header">СМ</th>
+            <th class="tbl_header">Итого</th>
+          </tr>
+        </tbody>
+        <tbody class="tbl_header" id="tbl_body_data_trud"></tbody>
+        <tbody class="tbl_header" id="tbl_body_data_trud_sum">
+          <tr>
+            <th class="tbl_header">Итого</th>
+            <th class="tbl_header"></th>
+            <th class="tbl_header"></th>
+            <th class="tbl_header"></th>
+            <th class="tbl_header"></th>
+            <th class="tbl_header"></th>
+            <th class="tbl_header"></th>
+            <th class="tbl_header"></th>
+            <th class="tbl_header"></th>
+            <th class="tbl_header"></th>
+            <th class="tbl_header"></th>
+            <th class="tbl_header"></th>
+            <th class="tbl_header"></th>
+            <th class="tbl_header"></th>
+            <th class="tbl_header"></th>
+            <th class="tbl_header"></th>
+            <th class="tbl_header"></th>
+            <th class="tbl_header"></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="modal1">
+    <div class="modal1_name">
+      <input id="nameProject" type="text" placeholder="Введите наименование объекта" required>
+    </div>
+    <div class="modal1_data">
+      <p>Автор</p>
+      <input id="author" type="text" required>
+      <button id='btnProject'>Создать</button>
+      <button id='btnProject_close'>Отмена</button>
+    </div>
+  </div>
+
+
+
+  <script src="/js/_cards.js"></script>
+  <script src="/js/_index.js"></script>
+  <script src="/js/_toExcel.js"></script>
+
+
+
+</div>

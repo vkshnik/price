@@ -1,0 +1,18 @@
+        <link rel="stylesheet" href="/css/login.css">
+
+		<section class="prompt">
+			<h6 style="text-align:center; color:red">{{{msg}}}</h6>
+			<form action="/login" method="post">
+				<section>
+					<label for="username">Логин</label>
+					<input id="username" name="username" type="text" autocomplete="username" required autofocus>
+				</section>
+				<section>
+					<label for="current-password">Пароль</label>
+					<input id="current-password" name="password" type="password" autocomplete="current-password" required>
+				</section>
+				<button type="submit">Войти</button>
+			</form>
+			
+		</section>
+		
