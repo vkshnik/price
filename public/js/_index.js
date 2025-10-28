@@ -924,25 +924,25 @@ document.addEventListener('drop', (e) => {
             else if (dragged.id === 'pd_voda8') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section3', 'voda8') }
             else if (dragged.id === 'pd_voda9') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'м', '-', 'section3', 'voda9') }
 
-            else if (dragged.id === 'soprovoj_voda1') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section3', 'voda1') }
-            else if (dragged.id === 'soprovoj_voda2') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section3', 'voda2') }
-            else if (dragged.id === 'soprovoj_voda3') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section3', 'voda3') }
-            else if (dragged.id === 'soprovoj_voda4') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Камера', 'шт', '-', 'section3', 'voda4') }
-            else if (dragged.id === 'soprovoj_voda5') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Камера', 'шт', '-', 'section3', 'voda5') }
-            else if (dragged.id === 'soprovoj_voda6') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section3', 'voda6') }
-            else if (dragged.id === 'soprovoj_voda7') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section3', 'voda7') }
-            else if (dragged.id === 'soprovoj_voda8') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section3', 'voda8') }
-            else if (dragged.id === 'soprovoj_voda9') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'м', '-', 'section3', 'voda9') }
+            else if (dragged.id === 'soprovoj_voda1') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section4', 'voda1') }
+            else if (dragged.id === 'soprovoj_voda2') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section4', 'voda2') }
+            else if (dragged.id === 'soprovoj_voda3') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section4', 'voda3') }
+            else if (dragged.id === 'soprovoj_voda4') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Камера', 'шт', '-', 'section4', 'voda4') }
+            else if (dragged.id === 'soprovoj_voda5') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Камера', 'шт', '-', 'section4', 'voda5') }
+            else if (dragged.id === 'soprovoj_voda6') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section4', 'voda6') }
+            else if (dragged.id === 'soprovoj_voda7') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section4', 'voda7') }
+            else if (dragged.id === 'soprovoj_voda8') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section4', 'voda8') }
+            else if (dragged.id === 'soprovoj_voda9') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'м', '-', 'section4', 'voda9') }
 
-            else if (dragged.id === 'rd_voda1') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section3', 'voda1') }
-            else if (dragged.id === 'rd_voda2') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section3', 'voda2') }
-            else if (dragged.id === 'rd_voda3') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section3', 'voda3') }
-            else if (dragged.id === 'rd_voda4') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Камера', 'шт', '-', 'section3', 'voda4') }
-            else if (dragged.id === 'rd_voda5') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Камера', 'шт', '-', 'section3', 'voda5') }
-            else if (dragged.id === 'rd_voda6') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section3', 'voda6') }
-            else if (dragged.id === 'rd_voda7') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section3', 'voda7') }
-            else if (dragged.id === 'rd_voda8') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section3', 'voda8') }
-            else if (dragged.id === 'rd_voda9') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'м', '-', 'section3', 'voda9') }
+            else if (dragged.id === 'rd_voda1') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section5', 'voda1') }
+            else if (dragged.id === 'rd_voda2') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section5', 'voda2') }
+            else if (dragged.id === 'rd_voda3') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section5', 'voda3') }
+            else if (dragged.id === 'rd_voda4') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Камера', 'шт', '-', 'section5', 'voda4') }
+            else if (dragged.id === 'rd_voda5') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Камера', 'шт', '-', 'section5', 'voda5') }
+            else if (dragged.id === 'rd_voda6') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section5', 'voda6') }
+            else if (dragged.id === 'rd_voda7') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section5', 'voda7') }
+            else if (dragged.id === 'rd_voda8') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'км', '-', 'section5', 'voda8') }
+            else if (dragged.id === 'rd_voda9') { el = new CardPrice(color, dragged.id, dragged.textContent, 'Протяженность', 'м', '-', 'section5', 'voda9') }
 
 
 
@@ -1064,7 +1064,7 @@ window.addEventListener('load', (e) => {
     changeTab();
     if (document.querySelectorAll('input[type="checkbox"]:checked[class="chooseFile"]')[0] == undefined) {
         document.getElementById('main').innerHTML = `<div style="display:flex; justify-content: center; 
-        align-items: center; background-color: lightgrey; padding: 30px; width: 100%; height: 100%; ; border: 1px solid red; border-radius: 10px"> <img class="MMImage-Origin"
+        align-items: center; background-color: lightgrey; padding: 30px; width: 100%; height: 100%;  border-radius: 10px"> <img class="MMImage-Origin"
          src="https://cdn-icons-png.flaticon.com/512/5169/5169216.png" alt="Picture background" aria-hidden="true"
          style="width:150px; height: 150px;">
         </div>`

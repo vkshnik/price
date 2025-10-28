@@ -48,10 +48,10 @@ class CardPrice {
 
         //this._card_info.style.display = 'none';
         this._card_info.innerHTML = `
-            <h3><input id='name_${this.id}' value=${this.name}> </h3>
+            <h3><input id='name_${this.id}' value='${this.name }'> </h3>
             <div class="task">
-            <div>Параметр</div><div><input id='param_${this.id}' value=${this.param}></div>
-            <div>Ед. изм.</div><div> <input id='ei_${this.id}' value=${this.ei}></div>
+            <div>Параметр</div><div><input id='param_${this.id}' value='${this.param}'></div>
+            <div>Ед. изм.</div><div> <input id='ei_${this.id}' value='${this.ei}'></div>
             <div>Количество</div><div><input class ='class_${id}' id='value_${this.id}' type='text'  ></div>
             <div>Стоимость ед.(руб.)</div><div><input class ='class_${id}' id = 'cost_${this.id}' type='text'  ></div>
             <div>Стоимость всего (руб.)</div><div><input class ='class_${id}' id = 'price_${this.id}' type='text' disabled ></div>
