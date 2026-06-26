@@ -125,8 +125,8 @@ class CardPrice {
 
 
                 let z1 = ((y / 1.1) * 0.4006) / (130 / 21);
-                let z2 = ((y / 1.3) * 0.6944) / (15);
-                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type);
+                let z2 = ((y / 1.1) * 0.6944) / (15);
+                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type/1.1);
                 document.getElementById(`trud1_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z1 * infra * stage * type);
                 document.getElementById(`trud2_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z2 * infra * stage * type);
             }
@@ -173,8 +173,8 @@ class CardPrice {
 
 
                 let z1 = ((y / 1.1) * 0.4006) / (130 / 21);
-                let z2 = ((y / 1.3) * 0.6944) / (15);
-                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type);
+                let z2 = ((y / 1.1) * 0.6944) / (15);
+                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type/1.1);
                 document.getElementById(`trud1_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z1 * infra * stage * type);
                 document.getElementById(`trud2_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z2 * infra * stage * type);
             }
@@ -202,8 +202,8 @@ class CardPrice {
                 y = (0.0012 * x) + 275.7
 
                 let z1 = ((y / 1.1) * 0.4006) / (130 / 21);
-                let z2 = ((y / 1.3) * 0.6944) / (15);
-                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type);
+                let z2 = ((y / 1.1) * 0.6944) / (15);
+                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type/1.1);
                 document.getElementById(`trud1_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z1 * infra * stage * type);
                 document.getElementById(`trud2_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z2 * infra * stage * type);
             }
@@ -232,8 +232,8 @@ class CardPrice {
                 else if (x >= 30000) { y = 2166.2 }
 
                 let z1 = ((y / 1.1) * 0.4006) / (130 / 21);
-                let z2 = ((y / 1.3) * 0.6944) / (15);
-                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type);
+                let z2 = ((y / 1.1) * 0.6944) / (15);
+                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type/1.1);
                 document.getElementById(`trud1_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z1 * infra * stage * type);
                 document.getElementById(`trud2_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z2 * infra * stage * type);
             }
@@ -269,8 +269,8 @@ class CardPrice {
 
 
                 let z1 = ((y / 1.1) * 0.4006) / (130 / 21);
-                let z2 = ((y / 1.3) * 0.6944) / (15);
-                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type);
+                let z2 = ((y / 1.1) * 0.6944) / (15);
+                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type/1.1);
                 document.getElementById(`trud1_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z1 * infra * stage * type);
                 document.getElementById(`trud2_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z2 * infra * stage * type);
             }
@@ -306,8 +306,8 @@ class CardPrice {
 
 
                 let z1 = ((y / 1.1) * 0.4006) / (130 / 21);
-                let z2 = ((y / 1.3) * 0.6944) / (15);
-                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type);
+                let z2 = ((y / 1.1) * 0.6944) / (15);
+                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type/1.1);
                 document.getElementById(`trud1_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z1 * infra * stage * type);
                 document.getElementById(`trud2_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z2 * infra * stage * type);
             }
@@ -343,8 +343,8 @@ class CardPrice {
 
 
                 let z1 = ((y / 1.1) * 0.4006) / (130 / 21);
-                let z2 = ((y / 1.3) * 0.6944) / (15);
-                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type);
+                let z2 = ((y / 1.1) * 0.6944) / (15);
+                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type/1.1);
                 document.getElementById(`trud1_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z1 * infra * stage * type);
                 document.getElementById(`trud2_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z2 * infra * stage * type);
             }
@@ -380,8 +380,8 @@ class CardPrice {
 
 
                 let z1 = ((y / 1.1) * 0.4006) / (130 / 21);
-                let z2 = ((y / 1.3) * 0.6944) / (15);
-                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type);
+                let z2 = ((y / 1.1) * 0.6944) / (15);
+                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type/1.1);
                 document.getElementById(`trud1_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z1 * infra * stage * type);
                 document.getElementById(`trud2_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z2 * infra * stage * type);
             }
@@ -412,8 +412,8 @@ class CardPrice {
 
 
                 let z1 = ((y / 1.1) * 0.4006) / (130 / 21);
-                let z2 = ((y / 1.3) * 0.6944) / (15);
-                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type);
+                let z2 = ((y / 1.1) * 0.6944) / (15);
+                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type/1.1);
                 document.getElementById(`trud1_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z1 * infra * stage * type);
                 document.getElementById(`trud2_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z2 * infra * stage * type);
             }
@@ -443,8 +443,8 @@ class CardPrice {
 
 
                 let z1 = ((y / 1.1) * 0.4006) / (130 / 21);
-                let z2 = ((y / 1.3) * 0.6944) / (15);
-                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type);
+                let z2 = ((y / 1.1) * 0.6944) / (15);
+                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type/1.1);
                 document.getElementById(`trud1_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z1 * infra * stage * type);
                 document.getElementById(`trud2_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z2 * infra * stage * type);
             }
@@ -473,8 +473,8 @@ class CardPrice {
 
 
                 let z1 = ((y / 1.1) * 0.4006) / (130 / 21);
-                let z2 = ((y / 1.3) * 0.6944) / (15);
-                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type);
+                let z2 = ((y / 1.1) * 0.6944) / (15);
+                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type/1.1);
                 document.getElementById(`trud1_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z1 * infra * stage * type);
                 document.getElementById(`trud2_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z2 * infra * stage * type);
             }
@@ -504,8 +504,8 @@ class CardPrice {
 
 
                 let z1 = ((y / 1.1) * 0.4006) / (130 / 21);
-                let z2 = ((y / 1.3) * 0.6944) / (15);
-                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type);
+                let z2 = ((y / 1.1) * 0.6944) / (15);
+                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type/1.1);
                 document.getElementById(`trud1_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z1 * infra * stage * type);
                 document.getElementById(`trud2_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z2 * infra * stage * type);
             }
@@ -536,8 +536,8 @@ class CardPrice {
 
 
                 let z1 = ((y / 1.1) * 0.4006) / (130 / 21);
-                let z2 = ((y / 1.3) * 0.6944) / (15);
-                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type);
+                let z2 = ((y / 1.1) * 0.6944) / (15);
+                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type/1.1);
                 document.getElementById(`trud1_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z1 * infra * stage * type);
                 document.getElementById(`trud2_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z2 * infra * stage * type);
             }
@@ -567,8 +567,8 @@ class CardPrice {
 
 
                 let z1 = ((y / 1.1) * 0.4006) / (130 / 21);
-                let z2 = ((y / 1.3) * 0.6944) / (15);
-                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type);
+                let z2 = ((y / 1.1) * 0.6944) / (15);
+                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type/1.1);
                 document.getElementById(`trud1_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z1 * infra * stage * type);
                 document.getElementById(`trud2_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z2 * infra * stage * type);
             }
@@ -598,8 +598,8 @@ class CardPrice {
 
 
                 let z1 = ((y / 1.1) * 0.4006) / (130 / 21);
-                let z2 = ((y / 1.3) * 0.6944) / (15);
-                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type);
+                let z2 = ((y / 1.1) * 0.6944) / (15);
+                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type/1.1);
                 document.getElementById(`trud1_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z1 * infra * stage * type);
                 document.getElementById(`trud2_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z2 * infra * stage * type);
             }
@@ -629,8 +629,8 @@ class CardPrice {
 
 
                 let z1 = ((y / 1.1) * 0.4006) / (130 / 21);
-                let z2 = ((y / 1.3) * 0.6944) / (15);
-                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type);
+                let z2 = ((y / 1.1) * 0.6944) / (15);
+                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type/1.1);
                 document.getElementById(`trud1_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z1 * infra * stage * type);
                 document.getElementById(`trud2_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z2 * infra * stage * type);
             }
@@ -661,8 +661,8 @@ class CardPrice {
 
 
                 let z1 = ((y / 1.1) * 0.4006) / (130 / 21);
-                let z2 = ((y / 1.3) * 0.6944) / (15);
-                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type);
+                let z2 = ((y / 1.1) * 0.6944) / (15);
+                document.getElementById(`price_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(y * infra * stage * type/1.1);
                 document.getElementById(`trud1_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z1 * infra * stage * type);
                 document.getElementById(`trud2_${e.target.parentElement.parentElement.parentElement.id}`).value = Math.floor(z2 * infra * stage * type);
             }

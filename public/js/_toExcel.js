@@ -31,7 +31,7 @@ async function convertXlsx() {
                 const c = colIndex;
 
                 // Заполняем текущую позицию текстом
-                cellMatrix[r][c] = cell.innerText;
+                cellMatrix[r][c] = cell.innerText?.trim()
 
                 // Отмечаем занятые позиции
                 for (let rr = 0; rr < rowspan; rr++) {
@@ -43,32 +43,67 @@ async function convertXlsx() {
 
                 // Добавляем ячейку в Excel
                 const excelRow = sheet.getRow(r + 1);
-                excelRow.getCell(c + 1).value = cell.innerText;
+                let raw = cell.textContent.trim();
+                const isFirstColumn = c === 0;
+
+                // --- ПРОЦЕНТЫ (ВАЖНО: проверяем раньше чисел)
+                let percentMatch = raw.match(/^(\d+(?:[.,]\d+)?)%$/);
+
+                let value;
+                let isNum = false;
+                let isPercent = false;
+
+                if (percentMatch) {
+                    value = Number(percentMatch[1].replace(",", ".")) / 100;
+                    isNum = true;
+                    isPercent = true;
+                }
+                else if (isFirstColumn) {
+                    value = raw;   // 👈 ВСЕГДА строка
+                    isNum = false; // 👈 запрещаем числовой формат
+                }
+                else {
+                    value = parseExcelValue(raw);
+                    isNum = isNumberValue(raw);
+                }
+
+                excelRow.getCell(c + 1).value = value;
+
 
                 // --- Применяем стили
                 const style = window.getComputedStyle(cell);
+
+                const isBold =
+                    style.fontWeight === "bold" ||
+                    parseInt(style.fontWeight) >= 600;
+
                 const excelCell = excelRow.getCell(c + 1);
 
-                /*const bgColor = rgbFromCss(style.backgroundColor);
-                if (bgColor)
-                    excelCell.fill = {
-                        type: "pattern",
-                        pattern: "solid",
-                        fgColor: { argb: bgColor },
-                    };
-    
-                const fontColor = rgbFromCss(style.color);
-                excelCell.font = {
-                    color: { argb: fontColor },
-                    bold: style.fontWeight === "bold" || +style.fontWeight >= 600,
-                };*/
+                let align = style.textAlign || "left";
+
+
 
                 excelCell.alignment = {
-                    horizontal: style.textAlign || "left",
                     vertical: "middle",
                     wrapText: true,
                 };
+                const isMerged = cell.colSpan > 1 || cell.rowSpan > 1;
 
+                let horizontal = "left";
+
+                // только числа и НЕ заголовки
+                if (isNum && !isMerged) {
+                    horizontal = "right";
+                }
+                if (isPercent) {
+                    excelCell.numFmt = "0%";
+                } else if (isNum && !isFirstColumn) {
+                    excelCell.numFmt = "#,##0.00";
+                }
+
+                excelCell.font = {
+                    bold: isBold
+                };
                 excelCell.border = {
                     top: { style: "thin" },
                     left: { style: "thin" },
@@ -97,7 +132,7 @@ async function convertXlsx() {
             const widthPx = cell.offsetWidth;
             const excelWidth = pxToExcel(widthPx);
             colWidths.push({ width: excelWidth });
-            //console.log(colWidths)
+           
         });
         sheet.columns = colWidths;
 
@@ -116,6 +151,20 @@ async function convertXlsx() {
     link.download = nameFile + '.xlsx';
     link.click();
 }
+
+function parseExcelValue(raw) {
+    if (!raw) return "";
+
+    let cleaned = raw
+        .replace(/\s/g, "")   // пробелы
+        .replace(",", ".");   // запятая → точка
+
+    let num = Number(cleaned);
+
+    return !isNaN(num) ? num : raw;
+}
+
+
 function rgbFromCss(cssColor) {
     if (!cssColor) return null;
     const match = cssColor.match(/rgb[a]?\((\d+),\s*(\d+),\s*(\d+)/);
@@ -123,7 +172,15 @@ function rgbFromCss(cssColor) {
     const [r, g, b] = match.slice(1).map(x => parseInt(x, 10));
     return 'FF' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
 }
+function isNumberValue(raw) {
+    if (!raw) return false;
 
+    let cleaned = raw
+        .replace(/\s/g, "")
+        .replace(",", ".");
+
+    return !isNaN(Number(cleaned));
+}
 // Преобразование пикселей → единицы ширины Excel
 // 1 единица Excel ≈ 7 пикселей (по эмпирическим наблюдениям)
 function pxToExcel(px) {
@@ -135,3 +192,5 @@ function pxToExcel(px) {
 function pxToPoints(px) {
     return Math.round((px / 1.333) * 100) / 100;
 }
+
+

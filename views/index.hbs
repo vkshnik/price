@@ -14,44 +14,30 @@
         </li>
       </ul>
     </div>
-    {{{clock}}}
-    <div id="watch" class="dropdown"></div>
+
+    <div class="dropdown">
+      <button class="btn_menu" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Последние проекты
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <div id="recentProject" class="recentProject1">
+        <div class="recentProjectHeader">
+          <div></div>
+          <div>Имя</div>
+          <div>Автор</div>
+          <div>Изм.</div>
+        </div>
+        <div class="recentProjectBody">
+          {{{pro}}}
+        </div>
+      </div>
+      </div>
+    </div>
 
   </div>
-  <div class="progress-container">
-    <div id="progressBar" class="progress-bar">
-      <div id="countdown">Загрузка...</div>
-    </div>
-  </div>
-  <div id="tabs"></div>
+<div id="tabs"></div>
 
   <div class="rightbar">
-    <div class="headObj">
-
-      <div class="isx" id='idisx'>
-        <div>Объект</div>
-        <div><textarea rows="1" id="_nameProject" value="" placeholder="Введите название объекта"></textarea></div>
-        <div><button class="btn_isx" id="isx1">&#10004;</button></div>
-        <div>Автор</div>
-        <div><textarea rows="1" id="_author" value="" placeholder="Введите автора"></textarea></div>
-        <div><button class="btn_isx" id="isx2">&#10004;</button></div>
-        <div>Прибыль</div>
-        <div style="margin: 0 auto;"><input id="profit" type="number"></div>
-        <div><button class="btn_isx" id="isx3">&#10004;</button></div>
-        <div>НДС</div>
-        <div style="margin: 0 auto;"><input id="tax" type="number"></div>
-        <div><button class="btn_isx" id="isx4">&#10004;</button></div>
-
-      </div>
-      <div class="results">
-        <div>Общая Стоимость</div>
-        <div id="result_price"></div>
-        <div>Общая Трудоемкость</div>
-        <div id="result_trud"></div>
-
-
-      </div>
-    </div>
 
     <div class="baza">
       <div class="podryad">
@@ -303,25 +289,38 @@
     </div>
 
 
+  </div>
 
-    <div class="recentProject">
-      <h5>Последние проекты</h5>
-      <div id="recentProject" class="recentProject1">
-        <div class="recentProjectHeader">
-          <div></div>
-          <div>Имя</div>
-          <div>Автор</div>
-          <div>Изм.</div>
-        </div>
-        <div class="recentProjectBody">
-          {{{pro}}}
-        </div>
+  <div class="leftbar" id="matrix">
+        <div class="headObj">
+
+      <div class="isx" id='idisx'>
+        <div>Объект</div>
+        <div><textarea rows="1" id="_nameProject" value="" placeholder="Введите название объекта"></textarea></div>
+        <div><button class="btn_isx" id="isx1">&#10004;</button></div>
+        <div>Автор</div>
+        <div><textarea rows="1" id="_author" value="" placeholder="Введите автора"></textarea></div>
+        <div><button class="btn_isx" id="isx2">&#10004;</button></div>
+        <div>Прибыль</div>
+        <div style="margin: 0 auto;"><input id="profit" type="number"></div>
+        <div><button class="btn_isx" id="isx3">&#10004;</button></div>
+        <div>НДС</div>
+        <div style="margin: 0 auto;"><input id="tax" type="number"></div>
+        <div><button class="btn_isx" id="isx4">&#10004;</button></div>
+
+      </div>
+      <div class="results">
+        <div>Общая Стоимость</div>
+        <div id="result_price"></div>
+        <div>Проектная трудоемкость</div>
+        <div id="result_trud1"></div>
+        <div>Наша трудоемкость</div>
+        <div id="result_trud2"></div>
+
+
       </div>
     </div>
 
-  </div>
-
-  <div class="matrix" id="matrix">
     <div id="main">
       <br>
       <div style="border-radius: 10px; border: 0px; text-align:right; "><button

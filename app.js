@@ -32,11 +32,11 @@ app.set('port', process.env.PORT || 7000);
 
 // First step is the authentication of the client
 app.use(session({
-  store: new SqliteStore({ client: sess, expired: { clear: true, intervalMs: 14 * 60 * 1000 /*minutes * 60 * 1000 */ } }),
+  store: new SqliteStore({ client: sess, expired: { clear: true, intervalMs: 60*24* 60 * 1000 /*minutes * 60 * 1000 */ } }),
   secret: " keyboard cat ",
   resave: false,
   saveUninitialized: false,
-  cookie: { maxAge: 15 * 60 * 1000 /*minutes * 60 * 1000 */ }
+  cookie: { maxAge: 60*24* 60 * 1000 /*minutes * 60 * 1000 */ }
 
 }))
 app.use(express.static(__dirname + '/public'));
